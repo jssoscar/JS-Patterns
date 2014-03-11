@@ -14,7 +14,7 @@
 function Interface(name, methods) {
 	if (this instanceof Instance) {
 		if (!(methods && typeof methods === "object" && Array == methods.constructor)) {
-			this.exception("The parameter 'methods' be an array.");
+			this.exception("The parameter 'methods' must be an array.");
 		}
 		if (arguments.length !== 2) {
 			this.exception("The argument length is" + arguments.length + ".In fact,here expect have 2 arguments.");
