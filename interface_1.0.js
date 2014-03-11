@@ -57,7 +57,8 @@ Interface.prototype = {
 			for (var method in data.methods) {
 				var methodName = data.methods[method];
 				if (!obj[methodName] || typeof object[methodName] !== "function") {
-					this.exception("Method " + methodName + "was not found in the object.Please ensure the object implements all interface methods.");
+					this.exception("Method '" + methodName + "' was not found.Please ensure the object implements all methods of interface '" 
+									+ data.name + "' ");
 				}
 			}
 		}
