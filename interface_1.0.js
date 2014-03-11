@@ -17,7 +17,7 @@ function Interface(name, methods) {
 			this.exception("The parameter 'methods' be an array.");
 		}
 		if (arguments.length !== 2) {
-			this.exception("The argument length is" + arguments.length + ".In fact,here expect have 2 arguments");
+			this.exception("The argument length is" + arguments.length + ".In fact,here expect have 2 arguments.");
 		}
 		this.name = name;
 		this.methods = [];
@@ -47,7 +47,7 @@ Interface.prototype = {
 	},
 	ensureImplements : function(obj) {
 		if (arguments.length < 2) {
-			this.exception("The argument length is" + arguments.length + ".In fact,here expect at least 2 arguments");
+			this.exception("The argument length is" + arguments.length + ".In fact,here expect at least 2 arguments.");
 		}
 		for (var index = 1, len = arguments.length; index < len; index++) {
 			var data = arguments[index];
@@ -58,7 +58,7 @@ Interface.prototype = {
 				var methodName = data.methods[method];
 				if (!obj[methodName] || typeof object[methodName] !== "function") {
 					this.exception("Method '" + methodName + "' was not found.Please ensure the object implements all methods of interface '" 
-									+ data.name + "' ");
+									+ data.name + "'.");
 				}
 			}
 		}
