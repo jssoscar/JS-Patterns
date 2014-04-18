@@ -12,7 +12,7 @@
  * @param {Array} methods : the intereace methods
  */
 function Interface(name, methods) {
-	if (this instanceof Instance) {
+	if (this instanceof Interface) {
 		if (!(methods && typeof methods === "object" && Array == methods.constructor)) {
 			this.exception("The parameter 'methods' must be an array.");
 		}
